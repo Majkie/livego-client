@@ -1,0 +1,72 @@
+{
+  "name": "livego",
+  "version": "0.1.0",
+  "description": "Framework-agnostic LiveGo client with framework-specific adapters",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./vue": {
+      "import": "./dist/index.vue.mjs",
+      "require": "./dist/index.vue.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/index.react.mjs",
+      "require": "./dist/index.react.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Majkie/livego-client.git"
+  },
+  "homepage": "https://github.com/Majkie/livego-client",
+  "bugs": {
+    "url": "https://github.com/Majkie/livego-client/issues"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "livego",
+    "live",
+    "reactive",
+    "vue",
+    "react",
+    "svelte"
+  ],
+  "author": "Mikuláš Třos",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "react": "^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "react": "^18.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vue": "^3.4.0"
+  }
+}
